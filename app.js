@@ -20,8 +20,13 @@ const path=require('path');
 app.use(express.static(path.join(__dirname+'/dist/FrontEnd')));
 // Task2: create mongoDB connection 
 
-Mongoose.connect("mongodb+srv://aparnaraji2000:Aparna29@cluster0.bswwvwk.mongodb.net/?retryWrites=true&w=majority" , {useNewUrlParser:true})
-
+Mongoose.connect("mongodb+srv://aparnaraji2000:2F3D7XrtnQXWmHPq@cluster0.bswwvwk.mongodb.net/?retryWrites=true&w=majority" , {useNewUrlParser:true})
+.then(()=>{
+    console.log("db connected successfully")
+})
+.catch((err)=>{
+    console.log(err)
+})
 //Task 2 : write api with error handling and appropriate api mentioned in the TODO below
 
 
